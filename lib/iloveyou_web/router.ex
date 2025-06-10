@@ -14,10 +14,10 @@ defmodule IloveyouWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", IloveyouWeb do
+  scope "/", IloveyouWeb.Live do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", Main
   end
 
   # Other scopes may use custom stacks.
