@@ -7,7 +7,6 @@ defmodule IloveyouWeb.Live.Main do
             name: System.get_env("LOVE_NAME") || "XXX"
         )
 
-
         {:ok, socket, layout: false}
     end
 end
