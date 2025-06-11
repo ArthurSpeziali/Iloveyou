@@ -4,7 +4,7 @@ defmodule IloveyouWeb.Live.Cards do
 
     def mount(_params, _session, socket) do
         card_list = JSON.decode!(
-            File.read!("priv/static/cards.json")
+            File.read!("priv/data/cards.json")
         )
 
         socket = assign(socket,
