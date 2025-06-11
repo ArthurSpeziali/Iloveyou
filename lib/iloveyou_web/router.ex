@@ -18,6 +18,8 @@ defmodule IloveyouWeb.Router do
     pipe_through :browser
 
     live "/", Main
+    live "/cards", Cards
+    live "/surprise", Surprise
   end
 
   # Other scopes may use custom stacks.

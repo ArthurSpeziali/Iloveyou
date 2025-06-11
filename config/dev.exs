@@ -9,7 +9,7 @@ import Config
 # Binding to loopback ipv4 address prevents access from other machines.
 config :iloveyou, IloveyouWeb.Endpoint,
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4000],
+  http: [ip: {0, 0, 0, 0}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
@@ -46,7 +46,7 @@ config :iloveyou, IloveyouWeb.Endpoint,
 config :iloveyou, IloveyouWeb.Endpoint,
   live_reload: [
     patterns: [
-      ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg|mp3)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/iloveyou_web/(controllers|live|components)/.*(ex|heex)$"
     ]
