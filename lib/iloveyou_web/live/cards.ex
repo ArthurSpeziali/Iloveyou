@@ -3,12 +3,11 @@ defmodule IloveyouWeb.Live.Cards do
 
 
     def mount(_params, _session, socket) do
-        File.ls!() |> IO.inspect(label: "ROOT")
-        File.ls!("priv/") |> IO.inspect(label: "PRIV")
-        File.ls!("priv/data/") |> IO.inspect(label: "DATA")
-
         card_list = JSON.decode!(
-            File.read!("priv/data/cards.json")
+            File.read!(
+                Application.app_dir(:iloveyou)
+                |> Path.join("priv/data/cards.json")
+            )
         )
 
         socket = assign(socket,
