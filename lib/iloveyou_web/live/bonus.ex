@@ -1,4 +1,4 @@
-defmodule IloveyouWeb.Live.Surprise do
+defmodule IloveyouWeb.Live.Bonus do
     use IloveyouWeb, :live_view
 
     
@@ -8,5 +8,12 @@ defmodule IloveyouWeb.Live.Surprise do
         )
 
         {:ok, socket, layout: false}
+    end
+
+
+    def handle_event("home", _params, socket) do
+        {:noreply,
+            push_navigate(socket, to: "/")
+        }
     end
 end

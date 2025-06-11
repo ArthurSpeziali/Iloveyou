@@ -19,7 +19,7 @@ defmodule IloveyouWeb.Router do
 
     live "/", Main
     live "/cards", Cards
-    live "/surprise", Surprise
+    live "/bonus", Bonus
   end
 
   # Other scopes may use custom stacks.

@@ -31,4 +31,10 @@ defmodule IloveyouWeb.Live.Cards do
             assign(socket, index: index - 1)
         }
     end
+
+    def handle_event("bonus", _params, socket) do
+        {:noreply,
+            push_navigate(socket, to: "/bonus")
+        }
+    end
 end

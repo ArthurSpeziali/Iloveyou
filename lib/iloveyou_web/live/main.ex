@@ -9,4 +9,11 @@ defmodule IloveyouWeb.Live.Main do
 
         {:ok, socket, layout: false}
     end
+
+
+    def handle_event("cards", _params, socket) do
+        {:noreply,
+            push_navigate(socket, to: "/cards")
+        }
+    end
 end
