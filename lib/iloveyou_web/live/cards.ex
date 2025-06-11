@@ -3,7 +3,7 @@ defmodule IloveyouWeb.Live.Cards do
 
 
     def mount(_params, _session, socket) do
-        card_list = JSON.decode!(
+        card_list = Jason.decode!(
             File.read!(
                 Application.app_dir(:iloveyou)
                 |> Path.join("priv/data/cards.json")
